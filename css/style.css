@@ -36,18 +36,31 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Base Styles for Figures */
 .figure .head {
     width: 36px;
     height: 36px;
-    background: #333;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, background-color 0.3s ease;
     z-index: 2;
 }
+
+.figure .body {
+    width: 20px;
+    height: 60px;
+    border-radius: 5px;
+    margin-top: -5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Specific Colors for Each Figure */
+#figure1 .head, #figure1 .body { background-color: #ff7f50; } /* Coral */
+#figure2 .head, #figure2 .body { background-color: #87ceeb; } /* Sky Blue */
+#figure3 .head, #figure3 .body { background-color: #32cd32; } /* Grass Green */
 
 .figure .eye {
     width: 6px;
@@ -57,6 +70,7 @@ body {
     margin: 0 4px;
     position: relative;
     overflow: hidden;
+    transition: opacity 0.3s ease;
 }
 
 .figure .pupil {
@@ -71,22 +85,18 @@ body {
     transition: transform 0.1s ease-out;
 }
 
-.figure .body {
-    width: 20px;
-    height: 60px;
-    background: #333;
-    border-radius: 5px;
-    margin-top: -5px;
-}
-
 /* 交互状态：偷看 (身体前倾) */
 .peek {
     transform: rotate(-15deg) translateY(-5px);
 }
 
-/* 交互状态：转向反方向 (脑袋 180 度) */
+/* 交互状态：转向反方向 (脑袋 180 度 + 隐藏眼睛) */
 .turn-away .head {
     transform: rotateY(180deg);
+}
+
+.turn-away .eye {
+    opacity: 0;
 }
 
 .login-form h2 {
@@ -127,28 +137,4 @@ body {
     align-items: center;
 }
 
-#toggle-password {
-    position: absolute;
-    right: 10px;
-    background: none;
-    border: none;
-    color: #1890ff;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.login-btn {
-    width: 100%;
-    padding: 12px;
-    background: #1890ff;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.login-btn:hover {
-    background: #40a9ff;
-}
+#toggle-
