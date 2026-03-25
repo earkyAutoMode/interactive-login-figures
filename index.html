@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>互动小人登录页</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="figures-container">
+            <div class="figure" id="figure1">
+                <div class="head">
+                    <div class="eye left"><div class="pupil"></div></div>
+                    <div class="eye right"><div class="pupil"></div></div>
+                </div>
+                <div class="body"></div>
+            </div>
+            <div class="figure" id="figure2">
+                <div class="head">
+                    <div class="eye left"><div class="pupil"></div></div>
+                    <div class="eye right"><div class="pupil"></div></div>
+                </div>
+                <div class="body"></div>
+            </div>
+            <div class="figure" id="figure3">
+                <div class="head">
+                    <div class="eye left"><div class="pupil"></div></div>
+                    <div class="eye right"><div class="pupil"></div></div>
+                </div>
+                <div class="body"></div>
+            </div>
+        </div>
+        <form class="login-form">
+            <h2>欢迎登录</h2>
+            <div class="input-group">
+                <label for="username">账号</label>
+                <input type="text" id="username" placeholder="请输入账号" autocomplete="off">
+            </div>
+            <div class="input-group">
+                <label for="password">密码</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="请输入密码">
+                    <button type="button" id="toggle-password">显示</button>
+                </div>
+            </div>
+            <button type="submit" class="login-btn">登录</button>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
